@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/GeoFun/static/css/main.347f1b6b.css",
+    "main.js": "/GeoFun/static/js/main.3f35987a.js",
+    "index.html": "/GeoFun/index.html",
+    "main.347f1b6b.css.map": "/GeoFun/static/css/main.347f1b6b.css.map",
+    "main.3f35987a.js.map": "/GeoFun/static/js/main.3f35987a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.347f1b6b.css",
+    "static/js/main.3f35987a.js"
+  ]
+}

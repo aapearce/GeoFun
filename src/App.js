@@ -353,29 +353,37 @@ useEffect(() => {
         )}
 
         <div className="options-grid">
-          {question.options.map((option, index) => {
-            let btnClass = 'option-btn';
-            if (showFeedback) {
-              if (option === question.correctAnswer) {
-                btnClass += ' correct';
-              } else if (option === selectedAnswer && selectedAnswer !== question.correctAnswer) {
-                btnClass += ' incorrect';
-              }
-            }
+          
+          
+          
+{question.options.map((option, index) => {
+  let btnClass = 'option-btn';
+  if (showFeedback) {
+    if (option === question.correctAnswer) {
+      btnClass += ' correct';
+    } else if (option === selectedAnswer && selectedAnswer !== question.correctAnswer) {
+      btnClass += ' incorrect';
+    }
+  }
 
-            return (
-              <button
-                key={index}
-                className={btnClass}
-                onClick={() => handleAnswer(option)}
-                disabled={showFeedback}
-                onMouseEnter={(e) => e.target.blur()}
-                autoFocus={false}
-              >
-                {option}
-              </button>
-            );
-          })}
+  return (
+    <button
+      key={`q${currentQuestion}-${option}`}
+      className={btnClass}
+      onClick={() => handleAnswer(option)}
+      disabled={showFeedback}
+      onMouseEnter={(e) => e.target.blur()}
+      onTouchStart={(e) => e.target.blur()}
+      onTouchEnd={(e) => e.target.blur()}
+      autoFocus={false}
+    >
+      {option}
+    </button>
+  );
+})}
+
+
+
         </div>
 
         {showFeedback && (

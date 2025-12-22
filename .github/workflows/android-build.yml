@@ -28,7 +28,8 @@ jobs:
       run: npm install --legacy-peer-deps
     
     - name: Build React app
-      run: npm CI=false run build
+      run: npm run build
+      env: CI: false
     
     - name: Sync Capacitor
       run: npx cap sync android

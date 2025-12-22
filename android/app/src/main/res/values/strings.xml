@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">GeoFun</string>
+    <string name="title_activity_main">GeoFun</string>
+    <string name="package_name">com.aapearce.geofun</string>
+    <string name="custom_url_scheme">com.aapearce.geofun</string>
+</resources>

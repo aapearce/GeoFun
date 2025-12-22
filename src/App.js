@@ -76,6 +76,13 @@ function App() {
     }
   }, [gameState, timer, showFeedback]);
 
+// Clear focus when question changes
+useEffect(() => {
+  if (document.activeElement) {
+    document.activeElement.blur();
+  }
+}, [currentQuestion]);
+
   const handleQuizTypeSelect = (quizType) => {
     setSelectedQuizType(quizType);
     setGameState('regionSelect');
@@ -234,16 +241,22 @@ function App() {
       setTimeBonus(prev => prev + bonus);
     }
 
-    setTimeout(() => {
-      if (currentQuestion < questions.length - 1) {
-        setCurrentQuestion(prev => prev + 1);
-        setSelectedAnswer(null);
-        setShowFeedback(false);
-        setTimer(30);
-      } else {
-        setGameState('results');
-      }
-    }, 2000);
+  setTimeout(() => {
+  // Remove focus from any active button
+  if (document.activeElement) {
+    document.activeElement.blur();
+  }
+  
+  if (currentQuestion < questions.length - 1) {
+    setCurrentQuestion(prev => prev + 1);
+    setSelectedAnswer(null);
+    setShowFeedback(false);
+    setTimer(30);
+  } else {
+    setGameState('results');
+  }
+}, 2000);
+  
   };
 
   const restartQuiz = () => {

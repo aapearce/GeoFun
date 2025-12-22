@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/GeoFun/static/css/main.b906c665.css",
-    "main.js": "/GeoFun/static/js/main.d0649713.js",
+    "main.js": "/GeoFun/static/js/main.52509760.js",
     "index.html": "/GeoFun/index.html",
     "main.b906c665.css.map": "/GeoFun/static/css/main.b906c665.css.map",
-    "main.d0649713.js.map": "/GeoFun/static/js/main.d0649713.js.map"
+    "main.52509760.js.map": "/GeoFun/static/js/main.52509760.js.map"
   },
   "entrypoints": [
     "static/css/main.b906c665.css",
-    "static/js/main.d0649713.js"
+    "static/js/main.52509760.js"
   ]
 }

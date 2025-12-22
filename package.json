@@ -1,6 +1,6 @@
 {
   "name": "geofun-app",
-  "homepage": "https://aapearce.github.io/GeoFun",
+  "homepage": ".",
   "version": "1.0.0",
   "private": true,
   "dependencies": {

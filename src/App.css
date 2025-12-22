@@ -644,3 +644,33 @@ body {
 .option-btn:focus-visible {
   outline: none;
 }
+
+/* Remove all focus and active states on buttons */
+.option-btn:focus {
+  outline: none;
+}
+
+.option-btn:focus-visible {
+  outline: none;
+}
+
+/* Mobile-specific tap highlight fixes */
+.option-btn {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.option-btn:active {
+  transform: scale(0.98);
+}
+
+/* Prevent hover states on touch devices */
+@media (hover: none) {
+  .option-btn:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transform: translateY(0);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+}

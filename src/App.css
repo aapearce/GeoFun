@@ -636,3 +636,11 @@ body {
   background: rgba(230, 57, 70, 0.2);
   color: var(--danger);
 }
+
+.option-btn:focus {
+  outline: none;
+}
+
+.option-btn:focus-visible {
+  outline: none;
+}

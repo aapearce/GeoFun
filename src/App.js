@@ -356,6 +356,8 @@ function App() {
                 className={btnClass}
                 onClick={() => handleAnswer(option)}
                 disabled={showFeedback}
+                onMouseEnter={(e) => e.target.blur()}
+                autoFocus={false}
               >
                 {option}
               </button>
